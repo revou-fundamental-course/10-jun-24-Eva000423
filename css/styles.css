@@ -1,6 +1,10 @@
-/* Ini css */
+/*Ini css */
 
+.celcius-container{
+    text-align: center;
+}
 .subject-info {
     font-size: 24px;
     font-style: italic;
-    font-family: math;}
+    font-family: math;
+}
