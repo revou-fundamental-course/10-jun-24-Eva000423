@@ -1,6 +1,42 @@
-.celcius-container{
+/* Ini css */
+
+.celcius-container {
     text-align: center;
 }
+
+.result-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.textarea {
+    resize: none;
+    background-color:#f8f8f8;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    height: 32px;
+    border: 0px;
+    border-radius: 4px;
+}
+
+.pink-color {
+    background-color: pink;
+    color: black;
+}
+
+.green-color {
+    background-color: greenyellow;
+    color: white;
+}
+
+.blue-color {
+    background-color: blue;
+    color: white;
+}
+
 .subject-info {
     font-size: 24px;
     font-style: italic;
