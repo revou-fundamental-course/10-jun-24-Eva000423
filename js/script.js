@@ -24,6 +24,6 @@ function reverse(){
         resultCalculate.innerHTML  
     }
     celcious
-    ('${Fahrenheit.toFixed(2)})&degF-32*5/9'= $(celcious.toFixed(2))&degC;
+    ('${Fahrenheit.toFixed(2)})&degF-32*5/9'= $(celcious.toFixed(2))&degC);
 
 }
