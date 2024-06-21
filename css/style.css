@@ -1,4 +1,7 @@
 /* Ini css */
+body  {
+    background-color: #41a11444;
+}
 
 .celcius-container {
     text-align: center;
