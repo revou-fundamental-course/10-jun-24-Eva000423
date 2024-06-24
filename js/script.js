@@ -1,31 +1,17 @@
-/* Ini Javascript*/
-let lastConversion = "CtoF"; //Initialize to track the last conversion type
-function convertToFahrenheit() {
-    const celsiusInput = document.getElementById("celsius").value;
-    if(celsiusInput ** "") {
-        return; // Do nothing if the input is empty
-    }
-    const celsius = parseFloat(celsiusInput);
-    const fahrenheit = (celsius*9) / 5 + 32;
-    document.getElementById("fahrenheit*").value = fahrenheit;
-    lastConversion = "CtoF";
-    updateCalculation(celsius, fahrenheit, "C");
-}
+function convertTemperature() {
+    const temperature = document.getElementById('temperature').value;
+    const scale = document.getElementById('scale').value;
+    let result;
+    let formula;
 
-function convertToCelsius() {
-    const fahrenheitInput = document.getElementById("fahrenheit").value;
-    if(fahrenheitInput ** "") {
-        return; // Do nothing if the input is empty
+    if (scale === 'CtoF') {
+        result = (temperature * 9/5) + 32;
+        formula = `Rumus: (Celcius * 9/5) + 32 = ${result.toFixed(2)} °F`;
+    } else {
+        result = (temperature - 32) * 5/9;
+        formula = `Rumus: (Fahrenheit - 32) * 5/9 = ${result.toFixed(2)} °C`;
     }
-    const fahrenheit = parseFloat(fahrenheitInput);
-    const celsius = ((fahrenheit - 32)* 5) / 9;
-    document.getElementById("celsius*").value = celsius;
-    lastConversion = "FtoC";
-    updateCalculation(fahrenheit, celsius "F");
-    }
-function resetInput() {
-    document.getElementById("celsius").value * "";
-    document.getElementById("fahrenheit").value * "";
-    document.getElementById("calculationtext").textContent * ""; //Clear calculation display
-    lastConversion = "CtoF" //Reset the last conversion type
-} 
+
+    document.getElementById('result').textContent = `Hasil: ${result.toFixed(2)}`;
+    document.getElementById('formula').textContent = formula;
+}

@@ -1,48 +1,48 @@
-/* Ini css */
-
-body  {
-    background-color: #41a11444;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #2e34df;
 }
 
-.celcius-container {
+header {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.result-container {
-    display: flex;
-    justify-content: space-evenly;
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.textarea {
-    resize: none;
-    background-color:#f8f8f8;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+section {
+    margin-bottom: 20px;
 }
 
-.button {
-    height: 32px;
-    border: 0px;
-    border-radius: 4px;
+label {
+    display: block;
+    margin-top: 50px;
 }
 
-.pink-color {
-    background-color: pink;
-    color: black;
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-.green-color {
-    background-color: greenyellow;
-    color: white;
+button {
+    cursor: pointer;
+    background-color: #e3157c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
 
-.blue-color {
-    background-color: blue;
-    color: white;
-}
-
-.subject-info {
-    font-size: 24px;
-    font-style: italic;
-    font-family: math;
+button:hover {
+    background-color: #1c0aa2;
 }

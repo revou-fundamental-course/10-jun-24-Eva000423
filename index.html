@@ -1,77 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva Konversi Suhu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>WEBSITE KONVERSI SUHU</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Masukkan suhu derajat celsius (&deg;C) ke kotak pertama, lalu klik tombol konversi untuk mendapatkan hasil konversi ke dalam bentuk fahrenheit (&deg;F)</h2>
+            <form id="conversionForm">
+                <label for="temperature">Suhu:</label>
+                <input type="number" id="temperature" name="temperature" required>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>eva konversi suhu</title>
-        <!--Ini link css-->
-        <link rel="stylesheets" type="text/css" href="css/style.css">
-    </head>
-    
-    <body>
-        <header>
-            <center><h1>WEBSITE KONVERSI SUHU</h1></center>
-        </header>
+                <label for="scale">Skala:</label>
+                <select id="scale" name="scale">
+                    <option value="CtoF">Celcius ke Fahrenheit</option>
+                    <option value="FtoC">Fahrenheit ke Celcius</option>
+                </select>
 
-        <!-- Main content-->
-        <main>
-            <h3>Masukkan suhu derajat celsius (&deg;C) ke kotak pertama, lalu klik tombol konversi untuk mendapatkan hasil konversi ke dalam bentuk fahrenheit (&deg;F)</h3>
-             <!-- Section Celsius-->
-            <section class="celsius-container">
-                <header>
-                    <h3>Celsius(&deg;C):</h3>
-                </header>
-                <section>
-                    <textarea name="celsius" id="celsius"></textarea>
-                </section>
-            </section>
-            <section>
-                <button onclick="converttofahrenheit()"; class="button pink-color">Konversi</button>
-                <button onclick="resetinput()"; class="button green-color">Reset</button>
-                <button onclick="reverseconversion()"; class="button blue-color">Reverse</button>
-            </section>
-            <section class="result-container"></section>
-             <!-- Section Fahrenheit-->
-            <section>
-                <header>
-                    <h3>Fahrenheit(&deg;F)</h3>
-                </header>
-                <section>
-                    <textarea></textarea>
-                </section>
-            </section>
-            <!-- Section Calculate-->
-             <section>
-                <header>
-                    <h3>Convertion Calculate:</h3>
-                </header>
-                <section>
-                    <textarea></textarea>
-                </section>
-
-             </section>
-             <hr />
-             <!-- Section formula/Info-->
-              <section>
-                <header>
-                    <h1>Cara Konversi Dari Celsius (&deg;C) ke Fahrenheit (&deg;F)</h1>
-                </header>
-            <hr></hr>
-            <p id="Convertion=description">Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <span class="subject-info">S</span> dalam derajat Celsius (&deg;C) kali 9/5 ditambah 32.</p>
-            <p id="Convertion-formula">
-                <span class="subject-info">S</span><sub>(&deg;F)</sub>=(<span class="subject-info">S</span><sub>(&deg;C)</sub>x 9/5)+32
-            </p>
-            atau
-            <p id="Convertion-formula-alt">
-                <span class="subject-info">S</span><sub>(&deg;C)</sub>=(<span class="subject-info">S</span><sub>(&deg;F)</sub>-32)/1.8
-            </p>
-
-            </section>
-
-        </main>
-        <!-- Ini link Javascript-->
-        <script src="js/script.js"></script>
-
-    </body>
+                <button type="button" onclick="convertTemperature()">Konversi</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+        <hr>
+        <section>
+            <h2>Rumus Penghitungan</h2>
+        <hr>
+            <p id="result">Hasil konversi</p>
+            <p id="formula">Rumus konversi</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>
